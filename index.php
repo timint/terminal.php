@@ -17,11 +17,11 @@
 		$terminal = new TerminalPHP();
 
 		$terminal->registerCommand('about', function(){
-			return 'Originally developed by <a href="https://github.com/smartwf/" target="_blank">SmartWF</a>. &nbsp; &nbsp; Further developed by <a href="https://www.github.com/timint/" target="_blank">T. Almroth</a>';
+			return 'Originally developed by <a href="https://github.com/smartwf/" target="_blank">SmartWF</a>.<br />Further developed by <a href="https://www.github.com/timint/" target="_blank">T. Almroth</a>.';
 		});
 
 	} catch (Exception $e) {
-		die($e->getMessage());
+		die('Error: '. $e->getMessage());
 	}
 
 	// Check if Request is Ajax
@@ -134,7 +134,7 @@
 	</div>
 </main>
 
-<footer>Originally developed by <a href="https://github.com/smartwf" target="_blank">SmartWF</a>. Further developed by <a href="https://github.com/timint" target="_blank">T. Almroth</a>.</footer>
+<footer><?php echo $terminal->runCommand('about'); ?></footer>
 
 <script>
 	let commands_list = <?php echo json_encode($terminal->commandList(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>;
@@ -151,6 +151,10 @@
 	var autocomplete_current_result = '';
 
 	var localCommands = {
+
+		'about': function() {
+			$('#terminal .content').append("<div class=\"line\"><?php echo addcslashes($terminal->runCommand('about'), "\r\n\""); ?></div>");
+		},
 
 		'clear': function() {
 			$('#terminal .content').html('');

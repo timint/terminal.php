@@ -5,6 +5,7 @@
   *
   * @package  Terminal.php
   * @author   SmartWF <hi@smartwf.ir>
+  * @author   T. Almroth <info@tim-international.net>
   */
 
 	class TerminalPHP {
