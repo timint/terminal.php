@@ -1,3 +1,4 @@
-<h1 align="center">Terminal.php</h1>
-<p align="center">A Terminal Emulator for PHP - Useful When You Don't Have Shell Access<p>
-<p align="center"><img src="https://user-images.githubusercontent.com/29660977/75099171-ca607180-55d3-11ea-97a9-7f856a00f1e7.png"></p>
+<h1>Terminal.php</h1>
+<p></p>A Terminal Emulator for PHP - Useful When You Don't Have Shell Access<p>
+<p><img src="https://github.com/timint/terminal.php/assets/359192/efeac8b3-8387-49ac-9417-2c5d5bda1880"></p>
+
